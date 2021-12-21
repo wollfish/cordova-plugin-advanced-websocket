@@ -1,5 +1,6 @@
 #import <Cordova/CDV.h>
 #import "WebSocketAdvanced.h"
+#import "UABuilder.h"
 
 @implementation WebSocketAdvanced
 
@@ -24,14 +25,19 @@
                                                         cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                         timeoutInterval:timeoutInterval];
 
+    // Adds user-agent, though allow upstream to override it via provided headers.
+    [request addValue:[UABuilder getUAString] forHTTPHeaderField:@"User-Agent"];
     for(id key in wsHeaders) {
         [request addValue:[wsHeaders objectForKey:key] forHTTPHeaderField:key];
     }
 
+
     _webSocket = [[SRWebSocket alloc] initWithURLRequest:request
                                       protocols:nil
                                       allowsUntrustedSSLCertificates:acceptAllCerts];
-    
+    NSArray* cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies];
+
+    _webSocket.requestCookies = cookies;
     _webSocket.delegate = self;
     _commandDelegate = commandDelegate;
     _callbackId = callbackId;

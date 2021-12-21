@@ -1,3 +1,8 @@
+Changes in forked version
+=====
+* Add cookies while creating websocket in iOS
+* Add device specific user-agent while creating websocket in iOS
+
 Cordova Plugin for using WebSockets
 ======
 [![npm version](https://badge.fury.io/js/cordova-plugin-advanced-websocket.svg)](https://badge.fury.io/js/cordova-plugin-advanced-websocket)
@@ -30,7 +35,7 @@ pod setup --verbose
 
 ### Cordova
 
-    $ cordova plugin add cordova-plugin-advanced-websocket
+    $ npm install cordova-plugin-advanced-websocket-cookies
 
 # API
 

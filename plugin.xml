@@ -44,8 +44,10 @@
             </feature>
         </config-file>
 
+        <header-file src="src/ios/UABuilder.h" />
         <header-file src="src/ios/WebSocketAdvanced.h" />
         <header-file src="src/ios/CordovaWebsocketPlugin.h" />
+        <source-file src="src/ios/UABuilder.m" />
         <source-file src="src/ios/WebSocketAdvanced.m" />
         <source-file src="src/ios/CordovaWebsocketPlugin.m" />
         
