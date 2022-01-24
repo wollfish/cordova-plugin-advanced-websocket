@@ -23,7 +23,7 @@ OkHttp library is included as maven dependency with version 3.10.0
 
 ### iOS
 
-SocketRocket is included as CocoaPod library with version 0.5.1
+SocketRocket is included as CocoaPod library with version 0.6.0
 
 To use it, you will need to install CocoaPods on your Mac:
 ```
