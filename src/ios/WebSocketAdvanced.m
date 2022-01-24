@@ -112,7 +112,7 @@
         }
         _pingCount++;
         _awaitingPong = YES;
-        [_webSocket sendPing:data];
+        [_webSocket sendPing:data error:NULL];
         NSLog(@"Sent ping #%ld", _pingCount);
     }
 }

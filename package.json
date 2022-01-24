@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-advanced-websocket-cookies",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "cordova": {
     "id": "cordova-plugin-advanced-websocket",
     "platforms": [
